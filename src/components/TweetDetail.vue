@@ -4,7 +4,7 @@
       <p class="tweet">{{content['text']}}</p>
       <div v-if="content['media_type'] === 'photo'" >
         <div v-for="n in content['photo_num']" :key="n">
-          <img :src="content['media_src'][n + 1]" width="300px" class="media-border">
+          <img :src="content['media_src'][n]" width="300px" class="media-border">
         </div>
       </div>
       <div v-if="content['media_type'] === 'video'" >
@@ -26,7 +26,6 @@ export default {
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   },
   computed: {
